@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+[id*="careerflow"], [class*="careerflow"] {
+    display: none !important;
+}

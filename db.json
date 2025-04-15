@@ -1,0 +1,364 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "name": "Sreekanth Reddy",
+      "email": "sree@gmail.com",
+      "password": "ABCD@1234"
+    }
+  ],
+  "employees": [
+    {
+      "id": "c3d6"
+    },
+    {
+      "id": "1",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "sri@gmail.com",
+      "password": "ABCD@1234"
+    }
+  ],
+  "user": [
+    {
+      "id": "a881"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "name": "Sreekanth Reddy",
+      "email": "vsreekanthreddy@gmail.com",
+      "subject": "Fees",
+      "message": "I want to know the Cource Fees"
+    },
+    {
+      "id": "2",
+      "name": "Sreekanth Reddy",
+      "email": "vsreekanthreddy@gmail.com",
+      "subject": "Fees",
+      "message": "I want to know the Cource Fees"
+    },
+    {
+      "id": "3",
+      "name": "Sreekanth Reddy",
+      "email": "vsreekanthreddy@gmail.com",
+      "subject": "Fees",
+      "message": "I want to know the Cource Fees"
+    },
+    {
+      "id": "6c18",
+      "name": "Karthik Reddy Vaddemani",
+      "email": "k@gmail.com",
+      "subject": "STIFund",
+      "message": "Is the any STIFund"
+    },
+    {
+      "id": "d985",
+      "name": "nhjbh ",
+      "email": "bbbgv@gmail.com",
+      "subject": "hjbhj",
+      "message": "gyfsxesxs"
+    },
+    {
+      "id": "0111",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "fhhbcbcbce"
+    },
+    {
+      "id": "c92f",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "hjbhj",
+      "message": "frgtrhyjulo;"
+    },
+    {
+      "id": "b5e1",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "gerhjyk"
+    },
+    {
+      "id": "852c",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "yjrju"
+    },
+    {
+      "id": "85a5",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "hjbhj",
+      "message": "i78i5"
+    },
+    {
+      "id": "9d7b",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "dfrgtrhy"
+    },
+    {
+      "id": "a57e",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "eferf"
+    },
+    {
+      "id": "defb",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "fghy"
+    },
+    {
+      "id": "2265",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "hjbhj",
+      "message": "ghu"
+    },
+    {
+      "id": "a956",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "w2de3r"
+    },
+    {
+      "id": "a33e",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "hjbhj",
+      "message": "bnn"
+    },
+    {
+      "id": "ee26",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "STIFund",
+      "message": "rgtgyh"
+    },
+    {
+      "id": "c59f",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "defrg"
+    },
+    {
+      "id": "3331",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "hjbhj",
+      "message": "ergvb"
+    },
+    {
+      "id": "2453",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "ede"
+    },
+    {
+      "id": "f8d2",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "hjbhj",
+      "message": "fgnmm"
+    },
+    {
+      "id": "c719",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "frvdc"
+    },
+    {
+      "id": "dd81",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213jghffddvd@gmail.com",
+      "subject": "sadscdvf",
+      "message": "scdfdfffffffffg"
+    },
+    {
+      "id": "3b67",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "hdh3g",
+      "message": "jeduhf"
+    },
+    {
+      "id": "cf9b",
+      "name": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "subject": "Fees",
+      "message": "nd2b3dg"
+    }
+  ],
+  "newsletters": [
+    {
+      "id": "1",
+      "email": "vsreekanthreddy@gmail.com"
+    },
+    {
+      "id": "2",
+      "email": "vsreekanthreddy@gmail.com"
+    },
+    {
+      "id": "3",
+      "email": "vsreekanthreddy@gmail.com"
+    },
+    {
+      "id": "9767",
+      "email": "vsreekanthreddy16213@gmail.com"
+    },
+    {
+      "id": "75a5",
+      "email": "vsreekanthreddy16213@gmail.com"
+    },
+    {
+      "id": "c638",
+      "email": "vsreekanthreddy16213@gmail.com"
+    },
+    {
+      "id": "84ee",
+      "email": "adfgh@gmai.com"
+    },
+    {
+      "id": "90ae",
+      "email": "kjh@gmail.com"
+    }
+  ],
+  "careerPaths": [
+    {
+      "category": "Clinical Data Management",
+      "positions": [
+        {
+          "title": "Clinical Data Coordinator",
+          "level": "Entry-Level",
+          "skills": [
+            "Data Entry",
+            "SQL",
+            "Discrepancy Resolution",
+            "Protocol Knowledge",
+            "Excel",
+            "Data Validation"
+          ],
+          "description": "As a Clinical Data Coordinator, you'll be the backbone of clinical trial data management. Your role involves meticulous data entry, resolving discrepancies, and ensuring the highest standards of data accuracy. You'll work closely with research teams to maintain the integrity of clinical trial information.\n\nKey Responsibilities:\n- Perform accurate and timely data entry\n- Resolve data discrepancies\n- Ensure compliance with clinical trial protocols\n- Maintain detailed and organized records\n- Support data quality initiatives"
+        },
+        {
+          "title": "Clinical Data Manager",
+          "level": "Mid-Level",
+          "skills": [
+            "Medidata Rave",
+            "Oracle Clinical",
+            "Regulatory Compliance",
+            "SAS",
+            "Statistical Analysis"
+          ],
+          "description": "Clinical Data Managers play a crucial role in designing and overseeing data management strategies for clinical trials. You'll ensure data quality, regulatory compliance, and effective communication between research teams.\n\nKey Responsibilities:\n- Design comprehensive data management plans\n- Oversee data collection processes\n- Ensure compliance with ICH-GCP guidelines\n- Manage clinical databases\n- Coordinate with cross-functional teams"
+        },
+        {
+          "title": "Clinical Data Scientist",
+          "level": "Mid-Level to Senior-Level",
+          "skills": [
+            "SAS",
+            "R",
+            "Python",
+            "CDISC Standards",
+            "Machine Learning"
+          ],
+          "description": "Clinical Data Scientists analyze large datasets, apply statistical models, and extract meaningful insights from clinical trial data.\n\nKey Responsibilities:\n- Conduct statistical analyses on clinical trial data\n- Develop predictive models for drug efficacy and safety\n- Ensure compliance with CDISC and regulatory standards"
+        }
+      ],
+      "id": "c14e"
+    }
+  ],
+  "enrolls": [
+    {
+      "id": "1",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "graduate"
+    },
+    {
+      "id": "17a9",
+      "fullName": "Karthik",
+      "email": "asbdv@gmail.com",
+      "phone": "1239876543",
+      "course": "Medical Coding",
+      "educationLevel": "high-school"
+    },
+    {
+      "id": "055e",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "undergraduate"
+    },
+    {
+      "id": "d7bc",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "high-school"
+    },
+    {
+      "id": "bedd",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "high-school"
+    },
+    {
+      "id": "c772",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "graduate"
+    },
+    {
+      "id": "3eb4",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "undergraduate"
+    },
+    {
+      "id": "a5c2",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Medical Coding",
+      "educationLevel": "graduate"
+    },
+    {
+      "id": "a666",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "high-school"
+    },
+    {
+      "id": "453b",
+      "fullName": "Sreekanth Reddy",
+      "email": "vsreekanthreddy16213@gmail.com",
+      "phone": "09390070375",
+      "course": "Clinical Data Management",
+      "educationLevel": "high-school"
+    }
+  ]
+}
