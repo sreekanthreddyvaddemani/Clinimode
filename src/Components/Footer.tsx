@@ -111,7 +111,7 @@ const Footer = () => {
     }
 
     try {
-      const response = await fetch("http://192.168.1.222:3001/newsletters", {
+      const response = await fetch("http://192.168.1.202:3000/api/newsletter/addmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

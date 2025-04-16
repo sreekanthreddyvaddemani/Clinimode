@@ -360,5 +360,53 @@
       "course": "Clinical Data Management",
       "educationLevel": "high-school"
     }
+  ],
+  "candidates": [
+    {
+      "id": "5572",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "mobileNumber": "09390070375",
+      "emailAddress": "vsreekanthreddy16213@gmail.com",
+      "qualification": "nfjnhbf",
+      "specialization": "enjfn4hfb",
+      "address": "Ayyavari palli,Pendlimarri(M),Kadapa(d)",
+      "collegeName": "njfnjn4h",
+      "mastersDegree": "fmjjf",
+      "yearOfPassOut": "2022",
+      "hasTraining": "No",
+      "trainingDetails": "",
+      "certifications": "mmfjrfn",
+      "interestedDomain": "kfmjm4jf",
+      "candidateType": "Fresher",
+      "yearsOfExperience": "",
+      "noticePeriod": "",
+      "currentSalary": "",
+      "expectedSalary": "",
+      "currentCompanyName": "",
+      "roleWorkedIn": ""
+    },
+    {
+      "id": "5573",
+      "fullName": "Sreekanth Reddy Vaddemani",
+      "mobileNumber": "09390070375",
+      "emailAddress": "vsreekanthreddy16213@gmail.com",
+      "qualification": "nfjnhbf",
+      "specialization": "enjfn4hfb",
+      "address": "Ayyavari palli,Pendlimarri(M),Kadapa(d)",
+      "collegeName": "njfnjn4h",
+      "mastersDegree": "fmjjf",
+      "yearOfPassOut": "2022",
+      "hasTraining": "No",
+      "trainingDetails": "",
+      "certifications": "mmfjrfn",
+      "interestedDomain": "kfmjm4jf",
+      "candidateType": "Experience",
+      "yearsOfExperience": "",
+      "noticePeriod": "",
+      "currentSalary": "",
+      "expectedSalary": "",
+      "currentCompanyName": "",
+      "roleWorkedIn": ""
+    }
   ]
 }

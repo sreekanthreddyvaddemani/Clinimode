@@ -7,7 +7,9 @@ import PrivacyPolicy from "./Components/PrivacyPolicy";
 import ClinimodeCareerPage from "./Components/Career/ClinimodeCareerPage";
 import MedicalCoding from "./Components/Courses/MedicalCoding/MedicalCoding";
 import Courses from "./Components/Courses/CourseNew/Courses";
-import NotFoundNew from "./Components/NotFoundPAge/NotFoundNew";
+import JobApplicationForm from "./Components/JobForm/JobApplication";
+import CandidateTable from "./Components/JobForm/CandidateTable";
+// import NotFoundNew from "./Components/NotFoundPAge/NotFoundNew";
 
 // import CertificationsComponent from "./Components/Profiles/";
 
@@ -63,6 +65,24 @@ function App() {
               </>
             }
           />
+           <Route
+            path="/job"
+            element={
+              <>
+                
+                <JobApplicationForm />
+              </>
+            }
+          />
+           <Route
+            path="/can"
+            element={
+              <>
+                
+                <CandidateTable />
+              </>
+            }
+          />
           <Route
             path="/clinicaldatamanagement"
             element={
@@ -115,7 +135,7 @@ function App() {
     />
           
           {/* 404 Page WITHOUT Navbar and Footer */}
-          <Route path="*" element={<NotFoundNew />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -29,44 +29,35 @@ const EnrollForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError(null);
-    
+  
     try {
-      const API_URL = import.meta.env.VITE_API_URL;
-      
-      const response = await fetch(`${API_URL}/enrolls`, {
+      const response = await fetch("http://192.168.1.202:3000/api/enrollment/add", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
   
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
+      if (response.ok) {
+        alert("Enroll submitted successfully!");
+        // Reset form
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          course: '',
+          educationLevel: ''
+        });
+      } else {
+        alert("Failed to submit registration. Please try again.");
       }
-  
-      const result = await response.json();
-      console.log("Form submitted successfully:", result);
-      
-      // Set submitted to true and reset the form data
-      setIsSubmitted(true);
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        course: '',
-        educationLevel: ''
-      });
-      
     } catch (error) {
-      console.error("Error submitting form:", error);
-      setError("Failed to submit the form. Please try again.");
-    } finally {
-      setIsSubmitting(false);
+      console.error("Error submitting registration:", error);
+      alert("An error occurred. Please try again.");
     }
   };
+  
   
   const resetForm = () => {
     setIsSubmitted(false);

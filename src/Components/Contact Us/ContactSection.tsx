@@ -28,9 +28,9 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const API_URL = import.meta.env.VITE_API_URL;
+    const API_URL = "http://192.168.1.202:3000/api";
   
-    console.log("API_URL:", API_URL); // Debugging output
+    console.log("API_URL:", API_URL); // Optional debugging
   
     try {
       const response = await fetch(`${API_URL}/messages`, {
@@ -57,6 +57,7 @@ const ContactSection: React.FC = () => {
       alert("An error occurred while sending the message.");
     }
   };
+  
   
 
   return (
