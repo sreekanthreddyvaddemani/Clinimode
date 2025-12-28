@@ -24,7 +24,7 @@ interface Candidate {
   expectedsalary: string | null;
   currentcompanyname: string | null;
   roleworkedin: string | null;
-  status?: string; // Added for UI state tracking
+  status: string; 
 }
 
 const CandidateTable = () => {
@@ -32,46 +32,69 @@ const CandidateTable = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [statusUpdating, setStatusUpdating] = useState<number | null>(null);
   
   useEffect(() => {
-    const fetchCandidates = async () => {
-      try {
-        setLoading(true);
-        const response = await axios.get('http://192.168.1.202:3000/api/job-registration/get');
-        console.log(response.data); // Log the full response for debugging
-  
-        // Check if the response contains the 'data' key and it is an array
-        if (response.data && Array.isArray(response.data.data)) {
-          setCandidates(response.data.data.map((candidate: any) => ({
-            ...candidate,
-            status: candidate.status || 'pending', // Default status if not provided
-          })));
-        } else {
-          throw new Error('API response does not contain valid candidate data.');
-        }
-  
-        setError(null); // Clear error if successful
-      } catch (err) {
-        setError('Failed to fetch candidates. Make sure the API server is running.');
-        console.error('Error fetching candidates:', err);
-      } finally {
-        setLoading(false); // End loading state
-      }
-    };
-  
     fetchCandidates();
   }, []);
   
+  const fetchCandidates = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get('http://192.168.1.202:3000/api/job-registration/get');
+      console.log(response.data); // Log the full response for debugging
+
+      // Check if the response contains the 'data' key and it is an array
+      if (response.data && Array.isArray(response.data.data)) {
+        setCandidates(response.data.data.map((candidate: any) => ({
+          ...candidate,
+          status: candidate.status || 'Pending', // Default status if not provided
+        })));
+      } else {
+        throw new Error('API response does not contain valid candidate data.');
+      }
+
+      setError(null); // Clear error if successful
+    } catch (err) {
+      setError('Failed to fetch candidates. Make sure the API server is running.');
+      console.error('Error fetching candidates:', err);
+    } finally {
+      setLoading(false); // End loading state
+    }
+  };
   
-  // Handle status change
-  const handleStatusChange = (id: number, newStatus: string) => {
-    setCandidates(candidates.map(candidate => 
-      candidate.id === id ? { ...candidate, status: newStatus } : candidate
-    ));
+  // Handle status change via API
+  const handleStatusChange = async (id: number, newStatus: string) => {
+    try {
+      setStatusUpdating(id);
+      
+      // Format status for API request
+      const statusPayload = {
+        status: newStatus === 'approved' ? 'Accepted' : 'Rejected'
+      };
+      console.log(statusPayload);
+      
+      // Send status update to API
+      await axios.put(
+        `http://192.168.1.202:3000/api/job-registration/status/${id}`, 
+        statusPayload
+      );
+      
+      // Update local state after successful API call
+      setCandidates(candidates.map(candidate => 
+        candidate.id === id ? { ...candidate, status: newStatus } : candidate
+      ));
+      
+    } catch (err) {
+      setError(`Failed to update status for candidate #${id}`);
+      console.error('Error updating candidate status:', err);
+    } finally {
+      setStatusUpdating(null);
+    }
   };
 
   // Get row background color based on status
-  const getRowBgColor = (status: string | undefined) => {
+  const getRowBgColor = (status: string) => {
     switch (status) {
       case 'approved':
         return 'bg-green-100';
@@ -104,6 +127,12 @@ const CandidateTable = () => {
         </div>
         <div className="ml-3">
           <p className="text-red-700 font-medium">Error: {error}</p>
+          <button 
+            onClick={() => fetchCandidates()}
+            className="mt-2 text-sm text-blue-600 hover:text-blue-800"
+          >
+            Try again
+          </button>
         </div>
       </div>
     </div>
@@ -191,33 +220,39 @@ const CandidateTable = () => {
                     
                     <td className="px-6 py-4">
                       <div className="flex space-x-2">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleStatusChange(candidate.id, 'approved');
-                          }}
-                          className={`px-3 py-1 text-sm rounded-full font-medium transition-colors duration-200 ${
-                            candidate.status === 'approved'
-                              ? 'bg-green-500 text-white'
-                              : 'bg-gray-100 text-gray-800 hover:bg-green-100 hover:text-green-800'
-                          }`}
-                        >
-                          {candidate.status === 'approved' ? 'Interviewed' : 'Interview Completed'}
-                        </button>
-                        
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleStatusChange(candidate.id, 'rejected');
-                          }}
-                          className={`px-3 py-1 text-sm rounded-full font-medium transition-colors duration-200 ${
-                            candidate.status === 'rejected'
-                              ? 'bg-red-500 text-white'
-                              : 'bg-gray-100 text-gray-800 hover:bg-red-100 hover:text-red-800'
-                          }`}
-                        >
-                          {candidate.status === 'rejected' ? 'Rejected' : 'Reject'}
-                        </button>
+                        {candidate.status === 'Pending' ? (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleStatusChange(candidate.id, 'approved');
+                              }}
+                              disabled={statusUpdating === candidate.id}
+                              className="px-3 py-1 text-sm rounded-full font-medium bg-gray-100 text-gray-800 hover:bg-green-100 hover:text-green-800 transition-colors duration-200"
+                            >
+                              {statusUpdating === candidate.id ? 'Updating...' : 'Interview Completed'}
+                            </button>
+                            
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleStatusChange(candidate.id, 'rejected');
+                              }}
+                              disabled={statusUpdating === candidate.id}
+                              className="px-3 py-1 text-sm rounded-full font-medium bg-gray-100 text-gray-800 hover:bg-red-100 hover:text-red-800 transition-colors duration-200"
+                            >
+                              {statusUpdating === candidate.id ? 'Updating...' : 'Reject'}
+                            </button>
+                          </>
+                        ) : (
+                          <span className={`px-3 py-1 text-sm rounded-full font-medium ${
+                            candidate.status === 'approved' 
+                              ? 'bg-green-500 text-white' 
+                              : 'bg-red-500 text-white'
+                          }`}>
+                            {candidate.status === 'approved' ? 'Interviewed' : 'Rejected'}
+                          </span>
+                        )}
                       </div>
                     </td>
                   </tr>

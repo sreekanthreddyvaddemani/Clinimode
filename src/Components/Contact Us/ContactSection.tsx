@@ -30,15 +30,13 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
     const API_URL = "http://192.168.1.202:3000/api";
   
-    console.log("API_URL:", API_URL); // Optional debugging
-  
     try {
-      const response = await fetch(`${API_URL}/messages`, {
+      const response = await fetch(`${API_URL}/contact/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData), // Make sure formData contains the right keys
       });
   
       if (response.ok) {
@@ -57,6 +55,7 @@ const ContactSection: React.FC = () => {
       alert("An error occurred while sending the message.");
     }
   };
+  
   
   
 
